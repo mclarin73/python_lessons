@@ -51,3 +51,26 @@ def even_value(value:int) -> str:
     #return 'True' if value % 2 == 0 else 'False'
 
 
+# Task 7
+# Odd not even
+def odd_number(value:int) -> str:
+    # Variant 1
+    if value % 2 == 1:
+        return 'True'
+    else:
+        return 'False'
+    # Variant 2
+    # return 'True' if value % 2 == 1 else 'False'
+
+
+# Task 8
+# Divisible by 16 and 22 without 0
+def divisible_by_16_and_22(value:int) -> str:
+    # Variant 1
+    if value % 16 == 0 and value % 22 == 0:
+        return 'True'
+    else:
+        return 'False'
+    # Variant 2
+    # return 'True' if value % 16 == 0 and value % 22 == 0 else 'False'
+
