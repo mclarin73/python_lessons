@@ -79,19 +79,28 @@ dictionary['Crimea'] = ['089']
 pattern_k = []
 help_list = list(dictionary.keys())
 for i in range(0, len(help_list)):
-
     print(i)
    # if 'v' in i or 'V' in i:
     #    pattern_k.append(i)
 re = [1,2,3,4]
 for i in re:
-    print(i)
-print(pattern_k)
+    #print(i)
+    pass
 
+student = dict()
+student['Genna'] = 5
+student['Maria'] = 4.8
+student['Vlad'] = 4.554
+student['Alex'] = 5.0
+student['Vika'] = 4.92
 
+print(student)
+counter_studen_mark = 0
+help_len = 0
+for value in student.values():
+    help_len += 1
+    counter_studen_mark += value
 
-
-
-
-
-
+#print(sum(list(student.values())), len(student))
+comp_res = [i for i in student.values() if i != 5]
+print(comp_res)
