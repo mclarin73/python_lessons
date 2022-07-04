@@ -33,6 +33,39 @@ if len(new_list_for_ave) == 10:
     #print(sum(new_list_for_ave)/ len(new_list_for_ave))
 
 
+x = (1,2,3,4,4)
+y = (5,6,7)
+#x = list(x)
+#x.append(6)
+#x.append(True)
+#print(tuple(x))
+
+#print(x + y)
+#print(x * 2)
+
+#for i in range(0, len(x)):
+#    print(x[i],i)
+# [], (), {}
+colors = {12, 5, 6, 12,8}  #set()
+#colors.add('red')
+#colors.update('wer')
+
+#n = 24
+#i = 2
+#primfac = []
+#while i * i <= n:
+#    while n % i == 0:
+#        primfac.append(i)
+#        n = n / i
+#    i = i + 1
+#if n > 1:
+#    primfac.append(n)
+#print(primfac)
+
+
+
+
+
 
 
 
