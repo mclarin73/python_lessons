@@ -22,3 +22,5 @@ summa = a_integer + b + c
 age = int(input('Age:'))
 t = 12 * 18
 print(age >= 18)
+
+

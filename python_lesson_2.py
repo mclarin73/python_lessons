@@ -95,5 +95,3 @@ def build_square():
     for i in range(8):
         print(pattern)
 
-
-print(build_square())

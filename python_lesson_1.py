@@ -25,7 +25,7 @@ def planet_name() -> str:
 def person_age(data_in_mouth:int) -> bool:
     constant_over_18_mounth = 18 * 12
     # Variant 1
-    if data_in_mouth >= constant_over_18_mounth:
+    if data_in_mouth >= constant_over_18_mounth :
         return True
     else:
         return False
