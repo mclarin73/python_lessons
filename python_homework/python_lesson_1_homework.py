@@ -47,6 +47,7 @@ def reversed_number():
     #input_number = input('Enter number')
     #if input_number.isdecimal(): some do
     if input_number >= 101 and input_number <= 999:
+
         input_number = str(input_number)
         # First Variant
         print(input_number[::-1])

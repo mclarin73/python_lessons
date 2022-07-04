@@ -62,6 +62,32 @@ colors = {12, 5, 6, 12,8}  #set()
 #    primfac.append(n)
 #print(primfac)
 
+# Dict
+dictionary = dict()
+dictionary['Sasha'] = (1,2)
+dictionary[0] = 'Dima'
+
+#for key,value  in dictionary.items():
+#    print(key, value)
+dictionary = dict()
+dictionary['Kyiv'] = ['044']
+dictionary['Sumu'] = ['056']
+dictionary['Lviv'] = ['075']
+dictionary['Kharkiv'] = ['030']
+dictionary['Crimea'] = ['089']
+
+pattern_k = []
+help_list = list(dictionary.keys())
+for i in range(0, len(help_list)):
+
+    print(i)
+   # if 'v' in i or 'V' in i:
+    #    pattern_k.append(i)
+re = [1,2,3,4]
+for i in re:
+    print(i)
+print(pattern_k)
+
 
 
 
