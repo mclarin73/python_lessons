@@ -1,6 +1,14 @@
-# Build a Fence
 # Task 1
-
+# Build a Fence
+def build_a_fence():
+    fence_value = input('Input circle or square:')
+    length = float(input('Input length: '))
+    fence_value = fence_value.lower()
+    if fence_value  in ['circle', 'square']:
+       if fence_value == 'circle':
+           print(f'Area of circle is {length ** 2 / (4 * 3.14)} ')
+       else:
+           print(f'Area of square is {length ** 2}')
 
 # Task 2
 # Check for divisible
@@ -138,4 +146,37 @@ def sequence():
             smallest_number = enter_number
         enter_des = input('If you want to start enter yes/no: ')
     print('Smallest value is, ', smallest_number)
+
+
+# Task 8
+
+
+# Task 10
+# fizz-buzz game
+def sipmle_game():
+    for i in range(1,101):
+        if i % 3 == 0 and i % 5 == 0:
+            print('fizz-buzz')
+        elif i % 3 == 0:
+            print('fizz')
+        elif i % 5 == 0:
+            print('buzz')
+        else:
+            print(i)
+
+
+# Task 11
+# boom game
+def boom_game():
+    for i in range(1,101):
+        if i % 7 == 0 or '7' in str(i):
+            print('BOOM')
+        else:
+            print(i)
+
+
+# Task 12
+# all info in lessons, all_prime_number
+def prime_numbers():
+    pass
 
