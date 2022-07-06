@@ -44,6 +44,6 @@ def dive_of(arr):
         if i % 2 == 0:
             res.append(i)
     # Second Variant
-    return [i for i in res if i % 2 == 0]
+    return [i for i in arr if i % 2 == 0]
 
-print(dive_of(list(range(1,51))))
+#print(dive_of(list(range(1,51))))
