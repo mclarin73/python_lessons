@@ -1,12 +1,16 @@
 # Lesson 3 end and Lesson 4
 
+# import frame
+import random
+
 #def test(a):
 #    return True if a >= 18 and a <= 27  else False
 arr = [1,3,5,7,90, -1]
-print(sum(arr), max(arr), min(arr))
+#print(sum(arr), max(arr), min(arr))
 counter = 0
 max_of = 0
 min_of = 0
+
 #for i in arr:
 #    if i > max_of:
 #        max_of = i
@@ -14,4 +18,10 @@ min_of = 0
 #        min_of = i
 #    counter += i
 #print(counter, max_of, min_of)
+# [::-1] == reversed
 
+#print(random.randint(1,10))
+def mean(x:list) -> float:
+    return sum(x) / len(x)
+
+#print(mean((3,4,6,7)))
