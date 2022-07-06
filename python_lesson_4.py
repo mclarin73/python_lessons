@@ -2,6 +2,7 @@
 
 # import frame
 import random
+from python_lessons.python_lesson_1 import second_in_day
 
 #def test(a):
 #    return True if a >= 18 and a <= 27  else False
@@ -92,3 +93,5 @@ else:
     print('Add new elemnt')
 
 #print(summ_lambda(mean_lambda([1,3,4,6,9])))
+
+#print(second_in_day())
