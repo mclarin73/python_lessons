@@ -24,6 +24,7 @@ min_of = 0
 def mean(x:list) -> float:
     return sum(x) / len(x)
 
+
 def summ_of(arr:list) -> float:
     couter = 0
     for i in arr:
@@ -34,3 +35,15 @@ def summ_of(arr:list) -> float:
 #print(summ_of([4,5,7,2,9]))
 #mean_a = mean([12,4,6,8])
 #print(mean((3,4,6,7)))
+
+# Desc: (arr - tuple) -> list, divide of 2
+def dive_of(arr):
+    # First Variant
+    res = []
+    for i in arr:
+        if i % 2 == 0:
+            res.append(i)
+    # Second Variant
+    return [i for i in res if i % 2 == 0]
+
+print(dive_of(list(range(1,51))))
