@@ -2,6 +2,7 @@
 
 # import frame
 import random
+import math as mat
 from python_lessons.python_lesson_1 import second_in_day
 
 #def test(a):
@@ -93,5 +94,28 @@ else:
     print('Add new elemnt')
 
 #print(summ_lambda(mean_lambda([1,3,4,6,9])))
-
+print(mat.sqrt(16), mat.e, mat.pi)
+print( mat.sqrt(16) == 16 ** 0.5, mat.pow(4,2) == 4 ** 2)
 #print(second_in_day())
+stroka = 'Some, some,,, 12 $'
+print(stroka.split(','))
+print(''.join(i for i in stroka if i.isdigit() or i.isalpha()))
+
+stroka_dva = '!18, 21, 56,78, aa'.replace('aa', '12').lstrip('!')
+stoka_name = 'OleksAnDR'
+print(stoka_name.capitalize(), stoka_name.lower())
+print([int(i) for i in stroka_dva.split(',') ])
+print('{0}, {1}'.format(12, 4))
+print(f'{12} + {5} = {12 + 5}')
+
+string_list = 'Sasha, Alex, Oleksandr, Dima, Olya, Gosha, Maria'.split(',')
+string_list_mark = '5,3,5,6,5,5,5'.split(',')
+list_new_mark = [int(iterator) for iterator in string_list_mark]
+
+avg_mark = mean(list_new_mark)
+min_mark = min(list_new_mark)
+max_mark = max(list_new_mark)
+mediana = list_new_mark[len(list_new_mark) // 2]
+print(avg_mark, min_mark, max_mark, mediana)
+
+
