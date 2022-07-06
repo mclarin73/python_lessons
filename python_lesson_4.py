@@ -46,4 +46,20 @@ def dive_of(arr):
     # Second Variant
     return [i for i in arr if i % 2 == 0]
 
+
+def func_for_func() :
+    return None
+
+
+def hello_name(name:str = 'Oleksandr', surname:str = 'Test'):
+    return 'Hello ' + name + ' ' + surname +'\nHave a good day!'
+
+#print(hello_name())
 #print(dive_of(list(range(1,51))))
+
+
+mean_lambda = lambda x: sum(x) / len(x)
+summ_lambda = lambda x: sum(x)
+x = [3,4,6,7,2]
+print(mean_lambda(x=x))
+#print(summ_lambda(mean_lambda([1,3,4,6,9])))
