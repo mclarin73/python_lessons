@@ -60,6 +60,35 @@ def hello_name(name:str = 'Oleksandr', surname:str = 'Test'):
 
 mean_lambda = lambda x: sum(x) / len(x)
 summ_lambda = lambda x: sum(x)
-x = [3,4,6,7,2]
-print(mean_lambda(x=x))
+plus_lambda = lambda a,b: a + b
+
+list_of_number = [3,4,6,7,2, 5]
+def print_hello_world():
+    print('Hello World!')
+
+#print(mean_lambda(list_of_number))
+#print(plus_lambda(5,5))
+student = [5,6,7,1,3,5]
+mean_of_user_mark = mean(student)
+#for i in student:
+#    if i > mean_of_user_mark:
+#        print('Big', i)
+#    elif i < mean_of_user_mark:
+#       print('Small', i)#
+#       elif i == mean_of_user_mark:
+#       print('Eval', i)
+
+# zip func
+first_a = [1, 2, 3, 4,5]
+second_b = ['a', 'b', 'c', 'e', 'e','e']
+third = [1,34,5,6, 6,6]
+if len(first_a) == len(second_b) == len(third):
+    result = list(zip(first_a, second_b, third))
+    res = []
+    for i in result:
+        res.append(list(i))
+    print(res)
+else:
+    print('Add new elemnt')
+
 #print(summ_lambda(mean_lambda([1,3,4,6,9])))
