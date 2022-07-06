@@ -24,4 +24,13 @@ min_of = 0
 def mean(x:list) -> float:
     return sum(x) / len(x)
 
+def summ_of(arr:list) -> float:
+    couter = 0
+    for i in arr:
+        couter += i
+    print(couter)
+    return sum(arr)
+
+#print(summ_of([4,5,7,2,9]))
+#mean_a = mean([12,4,6,8])
 #print(mean((3,4,6,7)))
