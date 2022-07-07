@@ -3,6 +3,8 @@
 # import frame
 import random
 import math as mat
+import time
+import datetime as dt
 from python_lessons.python_lesson_1 import second_in_day
 
 #def test(a):
@@ -118,4 +120,5 @@ max_mark = max(list_new_mark)
 mediana = list_new_mark[len(list_new_mark) // 2]
 print(avg_mark, min_mark, max_mark, mediana)
 
+print(dt.datetime.now())
 

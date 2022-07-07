@@ -13,7 +13,7 @@ second_list = ['a', 'b', 'c', 'e', 'v']
 
 # Second Var
 #for i in range(0, len(arr)):
-#    if arr[i] = 12:
+#    if arr[i] == 12:
 #        arr.remove(12)
 
 #for items in second_list:
