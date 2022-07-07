@@ -1,7 +1,7 @@
 print('Python lessons 3')
 
 # Lesson 2, first var
-arr = [12,34,31,12,4]
+arr = [12,34,31,4]
 
 # First Var
 new_arr = []
@@ -12,9 +12,11 @@ for i in arr:
 second_list = ['a', 'b', 'c', 'e', 'v']
 
 # Second Var
-#for i in range(0, len(arr)):
-#    if arr[i] == 12:
-#        arr.remove(12)
+for i in range(0, len(arr)):
+    print(i, arr[i])
+    if arr[i] == 12:
+        arr.remove(arr[i])
+        arr.append(1)
 
 #for items in second_list:
 #    print(items)
