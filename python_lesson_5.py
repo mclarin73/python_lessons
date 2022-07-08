@@ -84,8 +84,30 @@ f.close()
 # RLE
 # AAAABBB -> A4B3
 
-obj = {'name': 'Arthur Conan Doyle', 'books': [{'name': 'The Hound of the Baskervilles'}, {'name': 'The Leather Funnel'}]}
-print(json.dumps(obj))
+obj = {'name': 'Arthur Conan Doyle',
+       'books': [{'name': 'The Hound of the Baskervilles'},
+                 {'name': 'The Leather Funnel'}]}
+print(obj.keys())
+print(obj['name'], obj['books'])
+for i in obj['books']:
+    print(i)
+
+a_input = input('Enter value:')
+b_input = input('Enter second value: ')
+
+try:
+    a_input = int(a_input)
+    b_input = int(b_input)
+    print(a_input / b_input)
+except:
+    #print('No Value')
+    print('Try Again!')
+else:
+    print(a_input)
+
+
+
+
 # Create simple weather-app
 api_name = '33d99a1c99c5ea82e6aaff8592cd6fc3'
 name_of_city = 'Lviv'
