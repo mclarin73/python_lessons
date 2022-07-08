@@ -35,13 +35,16 @@ def div(number):
 #    input_value = input('enter quit if u want stop: ')
  #   print(input_value)
 
-def check_div_and_cont(enter_range:int) -> None:
+def check_div_and_cont(enter_range:int, val = 0) -> None:
+    # some cond
     for i in range(int(enter_range)):
         if i % 2 == 0:
             continue
         else:
-            print(i)
+            print(i, val)
 
+#print(check_div_and_cont(enter_range=10, val=2))
+#print(sorted([1,3,5,6], reverse=False))
 #a = check_div_and_cont(100)
 #print(type(a))
 # print(check_div_and_cont(100.5))
@@ -51,9 +54,25 @@ def check_div_and_cont(enter_range:int) -> None:
 #        pass
 #    else:
 #        print(i)
+def args_example(*args):
+    help_list = list(args)
+    print(type(args))
+    for i in help_list:
+        print(i)
+
+#print(args_example(*(5,3,5)), args_example([12, [1,3,4],4,6,7,8,9,12]))
+
 #end_prog = dt.datetime.now()
 
+#f = open('new_file.txt', 'x') # создание файла
+f = open('/Users/alksandr/Desktop/test.txt', 'a')
 
+f.write('Some text')
+f.close()
+
+f = open('/Users/alksandr/Desktop/test.txt', 'r')
+print(f.read())
+f.close()
 # Create simple weather-app
 api_name = '33d99a1c99c5ea82e6aaff8592cd6fc3'
 name_of_city = 'Lviv'
