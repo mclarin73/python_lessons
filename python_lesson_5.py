@@ -73,6 +73,14 @@ f.close()
 f = open('/Users/alksandr/Desktop/test.txt', 'r')
 print(f.read())
 f.close()
+
+f = open('/Users/alksandr/Desktop/d.txt', 'r')
+print(f.read())
+f.close()
+
+# RLE
+# AAAABBB -> A4B3
+
 # Create simple weather-app
 api_name = '33d99a1c99c5ea82e6aaff8592cd6fc3'
 name_of_city = 'Lviv'
