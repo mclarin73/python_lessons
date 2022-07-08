@@ -1,6 +1,7 @@
 # Work with file system - mini pet  - continue 4 lessons
 
 import requests
+import json
 import datetime as dt
 
 
@@ -71,16 +72,20 @@ f.write('Some text')
 f.close()
 
 f = open('/Users/alksandr/Desktop/test.txt', 'r')
-print(f.read())
+#print(f.read())
 f.close()
 
 f = open('/Users/alksandr/Desktop/d.txt', 'r')
-print(f.read())
+#print(f.read())
 f.close()
+#with open('/Users/alksandr/Desktop/d.txt', 'r') as f:
+ #   print(type(f.readline()))
 
 # RLE
 # AAAABBB -> A4B3
 
+obj = {'name': 'Arthur Conan Doyle', 'books': [{'name': 'The Hound of the Baskervilles'}, {'name': 'The Leather Funnel'}]}
+print(json.dumps(obj))
 # Create simple weather-app
 api_name = '33d99a1c99c5ea82e6aaff8592cd6fc3'
 name_of_city = 'Lviv'
