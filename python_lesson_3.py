@@ -12,11 +12,11 @@ for i in arr:
 second_list = ['a', 'b', 'c', 'e', 'v']
 
 # Second Var
-for i in range(0, len(arr)):
-    print(i, arr[i])
-    if arr[i] == 12:
-        arr.remove(arr[i])
-        arr.append(1)
+#for i in range(0, len(arr)):
+#    print(i, arr[i])
+ #   if arr[i] == 12:
+ #       arr.remove(arr[i])
+ #       arr.append(1)
 
 #for items in second_list:
 #    print(items)
