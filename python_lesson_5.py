@@ -1,9 +1,28 @@
-# Work with file system
+# Work with file system - mini pet  - continue 4 lessons
+
 import requests
+import datetime as dt
 
 
+#start_prog = dt.datetime.now()
+
+res = []
+def div(number):
+    #if number % 2 == 0: return True
+    #else: return False
+    return True if number % 2 == 0 else False
 
 
+for i in range(1, 100):
+    if len(res) == 15:
+        break
+    else:
+        if div(i) == True:
+            res.append(i)
+
+print(res)
+
+#end_prog = dt.datetime.now()
 
 
 # Create simple weather-app
