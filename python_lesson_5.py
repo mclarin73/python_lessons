@@ -141,3 +141,14 @@ while des_input != 'stop':
     print(f'Weather in city {name_clear} is {get_weather(name_clear, api= api_name)}')
     des_input = input('Enter something to continue else enter stop: ')
 
+input_des = input('Enter stop to stop or press any: ')
+while input_des != 'stop':
+    #input_a = int(input('Enter int: '))
+    try:
+        input_a = int(input('Enter int: '))
+        input_des = input('Enter stop to stop or press any: ')
+    except:
+        print('Try again!')
+        input_des = input('Enter stop to stop or press any: ')
+    else:
+        print(input_a)

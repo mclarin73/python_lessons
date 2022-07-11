@@ -2,6 +2,7 @@
 
 import json
 
+
 # Учебный JSON
 str_json = '''
 {  
@@ -18,10 +19,10 @@ str_json = '''
 } 
 '''
 
-new_data = json.loads(str_json) # create from JSON to dict
+new_data = json.loads(str_json) # Сreate from JSON to dict
 
-print(new_data.keys()) # посмотреть верхний ключ
-print(new_data['Student1'].keys()) # посмотреть все значение по ключу
+print(new_data.keys()) #Посмотреть верхний ключ
+print(new_data['Student1'].keys()) # Посмотреть все значение по ключу
 
 for upper_level_json in new_data.keys(): # пара ключ-значение можно пройти в цикле for/while
     for key, value in new_data[upper_level_json].items(): # пройдемся по вложенных значений
@@ -30,6 +31,7 @@ for upper_level_json in new_data.keys(): # пара ключ-значение м
 
 # Pickle
 import pickle
+
 
 # Создание и вписывание данных(шаг 1)
 #name_with_mark = {'Name1': 90, 'Name2':98, 'Name3':60, 'Name4':76, 'Name5':81}
@@ -44,3 +46,6 @@ pickle_in = open('dict.pickle', 'rb')
 new_name = pickle.load(pickle_in) # создали словарь
 
 print(new_name.keys()) # можно работать как с обычным словорем
+
+for key in new_name.keys():
+    print(key)
