@@ -1,5 +1,5 @@
 from collections import defaultdict, Counter
-from itertools import product, permutations
+from itertools import product, permutations, combinations
 class Transport:
     """
     class desc transport type
@@ -30,7 +30,7 @@ obj_b = Transport(name='Train', wei=30000, mark='Hundai')
 #input_some_text = input('Enter name: ')
 input_some_text = 'Vadimm'
 name_list = ['sasha', 'sasha', 'sasha', 'Sasha', 'vadim', 'maria', 'maria']
-some_r = [1,2 ,3,4,5]
+some_r = [1,2,3,4,5]
 counter = dict(Counter(input_some_text))
 #print(counter.most_common(3))
 #print(Counter(some_r))
@@ -38,4 +38,10 @@ counter = dict(Counter(input_some_text))
 print(list(product(some_r, name_list)))
 
 dna = 'abc'
-print(list(permutations(dna)))
+#print(list(permutations(dna)))
+#print(list(combinations(some_r, 2)))
+arr = [34, 50, 101, 67,87]
+for i in arr:
+    if i == 101:
+        print(arr.index(i))
+        break
