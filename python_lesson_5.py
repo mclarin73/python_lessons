@@ -75,9 +75,9 @@ f = open('/Users/alksandr/Desktop/test.txt', 'r')
 #print(f.read())
 f.close()
 
-f = open('/Users/alksandr/Desktop/d.txt', 'r')
+#f = open('/Users/alksandr/Desktop/d.txt', 'r')
 #print(f.read())
-f.close()
+#f.close()
 #with open('/Users/alksandr/Desktop/d.txt', 'r') as f:
  #   print(type(f.readline()))
 
@@ -140,3 +140,4 @@ while des_input != 'stop':
     name_clear = check_input_city(name_of_city)
     print(f'Weather in city {name_clear} is {get_weather(name_clear, api= api_name)}')
     des_input = input('Enter something to continue else enter stop: ')
+
