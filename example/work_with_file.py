@@ -28,3 +28,19 @@ for upper_level_json in new_data.keys(): # пара ключ-значение м
         print(f'{upper_level_json} хранит в себе ключ {key} у которого значение {value}')
 
 
+# Pickle
+import pickle
+
+# Создание и вписывание данных(шаг 1)
+#name_with_mark = {'Name1': 90, 'Name2':98, 'Name3':60, 'Name4':76, 'Name5':81}
+
+#pickle_out = open('dict.pickle', 'wb') # создать pickle
+#pickle.dump(name_with_mark, pickle_out) # вписать в него значение словаря
+#pickle_out.close() # закрыть файл
+
+# После шага один(закоментировать код)
+# Шаг два - разпаковка данных
+pickle_in = open('dict.pickle', 'rb')
+new_name = pickle.load(pickle_in) # создали словарь
+
+print(new_name.keys()) # можно работать как с обычным словорем
