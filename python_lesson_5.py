@@ -147,8 +147,10 @@ while input_des != 'stop':
     try:
         input_a = int(input('Enter int: '))
         input_des = input('Enter stop to stop or press any: ')
-    except:
+    except TypeError:
         print('Try again!')
         input_des = input('Enter stop to stop or press any: ')
+    except ValueError:
+        print('Value Error')
     else:
         print(input_a)
