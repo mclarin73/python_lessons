@@ -31,3 +31,37 @@ x_2 = np.array([[i for i in range(10, 20)], [i for i in range(100, 110)]])
 
 print(x_2)
 print(x_2.shape, x_2.size, x_2[0, 4] == x_2[0][4])
+print(x_2[:, 4:6], x_2[1, 0:2] == x_2[1][0:2])
+print(x_2[::-1, :]) # add x_2[::-1][:]
+
+some_np = np.array([
+    ['a', 'b','c'],
+    ['d', 'e', 'f']
+                   ])
+
+print(some_np[0,0:2], ord('a'), chr(97))
+
+vector = np.arange(12)
+print(vector.shape, vector.size, vector.min(), vector.max())
+print(vector.reshape((3,-3)))
+print(vector.reshape(2,6))
+# inf
+
+print(np.sqrt(vector), np.sin(vector))
+#print(np.log2(vector))
+print(vector.astype(np.float_))
+
+print(f'Mediana of vector {np.median(vector)}, Med: {vector.mean()}')
+
+x_ones = np.ones((1, 2, 3))
+print(x_ones.size, x_ones.shape)
+print(x_ones.sum(axis=2))
+print([1,2,3 ] + [4,5,6])
+
+x_req = [1,2,3,4]
+
+r = x_req.copy()
+print(x_req)
+x_req.append(6)
+
+print(r, x_req)
