@@ -23,5 +23,10 @@ one_matrix = np.ones((4, 1), dtype=np.float)
 print(one_matrix, one_matrix.size, one_matrix.shape)
 print(x_2d[0].sum(), x_2d[1].sum(), len(x_2d[0]), x_2d[0].size)
 print('Second part of lesson')
-print(x_2d)
-print(x_2d[1::])
+lins = np.linspace(0, 1, 20)
+print(lins)
+print(a[-1])
+
+x_2 = np.array([[i for i in range(10, 20)], [i for i in range(100, 110)]])
+
+print(x_2)
