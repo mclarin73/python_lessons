@@ -30,3 +30,4 @@ print(a[-1])
 x_2 = np.array([[i for i in range(10, 20)], [i for i in range(100, 110)]])
 
 print(x_2)
+print(x_2.shape, x_2.size, x_2[0, 4] == x_2[0][4])
