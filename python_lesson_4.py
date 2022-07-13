@@ -29,6 +29,7 @@ def mean(x:list) -> float:
     return sum(x) / len(x)
 
 
+
 def summ_of(arr:list) -> float:
     couter = 0
     for i in arr:

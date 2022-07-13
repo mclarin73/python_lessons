@@ -2,7 +2,6 @@
 
 import json
 
-
 # Учебный JSON
 str_json = '''
 {  
