@@ -2,6 +2,7 @@
 from random import randint
 import os
 
+
 # Slide 4
 # Task 1
 def odd_or_even(number: int) -> str:
@@ -64,7 +65,7 @@ def calculate_task():
             print('Wrong answer')
         all_task += 1
         start = input('Enter anything to continue or no to stop: ')
-    return f'You have  {score * 100/all_task} % of all answer'
+    return f'You have  {score * 100 / all_task} % of all answer'
 
 
 # Slide 10
@@ -104,7 +105,6 @@ def prime_check(number: int) -> str:
 
 # Task 4
 def graduate_student() -> None:
-
     student_dict = dict()
     input_val = input('For start enter anything:  ')
     while input_val != 'stop':
@@ -139,6 +139,5 @@ def square() -> None:
     # task 7
     for i in range(11, 0, -1):
         print('%' * i)
-
 
 # Task 8
