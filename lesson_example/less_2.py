@@ -125,4 +125,20 @@ def graduate_student() -> None:
             print(f'Student {key} have mark: {value} it is less than avg {avg}')
 
 
-# Task 5
+# Slide 25
+# Task 5-6-7
+def square() -> None:
+    # task 5
+    for i in range(9):
+        print('*' * 8)
+
+    # task 6
+    for i in range(9):
+        print('#' * 8)
+
+    # task 7
+    for i in range(11, 0, -1):
+        print('%' * i)
+
+
+# Task 8
