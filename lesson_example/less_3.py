@@ -1,5 +1,8 @@
 # Lesson  3
+
 from functools import reduce
+import numpy as np
+from random import randint
 
 
 # Slide 5. Task 1
@@ -35,4 +38,76 @@ def mark_student() -> None:
         start = input('Enter anything to start or write stop: ')
 
     for key, value in name_and_mark.items():
-        print(f'Student: {enter_name}\nWith teacher {key} you have medium value is {sum([int(i) for i in value if i.isdigit()]) / len(value)}')
+        print(
+            f'Student: {enter_name}\nWith teacher {key} you have medium value is {sum([int(i) for i in value if i.isdigit()]) / len(value)}')
+
+
+# Slide 19
+# Task 1
+def chess_tournament() -> dict:
+    pass
+
+
+# Task 2
+def math_func() -> None:
+    operation = ['+', '-', '*', '/']
+    res = dict()
+
+    # Helper func to generate value
+    def help_to_random_operator() -> list:
+        return [randint(0, 1000), randint(0, 1001)]
+
+    # Helper func to random operation
+    def choose_operation(item1: int, item2: int) -> str:
+        return operation[randint(0, 3)] if item2 != 0 else operation[randint(0, 3)]
+
+    # Except for wrong type
+    def helper_try(item: str) -> int:
+        try:
+            return int(item)
+        except TypeError:
+            return 0
+
+    input_des = input('Enter anything to start or stop to stop: ')
+
+    while input_des != 'stop':
+        tmp_operation = help_to_random_operator()
+        if choose_operation(tmp_operation[0], tmp_operation[1]) == '+':
+            user_variant = input(f'Enter {tmp_operation[0]} + {tmp_operation[1]} = : ')
+            if helper_try(user_variant) == sum(tmp_operation):
+                res[f'{tmp_operation[0]} + {tmp_operation[1]} = {sum(tmp_operation)}'] = f'You answer correct! {user_variant} '
+            else:
+                res[f'{tmp_operation[0]} + {tmp_operation[1]} = {sum(tmp_operation)}'] = f'You answer wrong {user_variant} :( '
+
+        elif choose_operation(tmp_operation[0], tmp_operation[1]) == '-':
+            user_variant = input(f'Enter {tmp_operation[0]} - {tmp_operation[1]} = : ')
+            if helper_try(user_variant) == tmp_operation[0] - tmp_operation[1]:
+                res[f'{tmp_operation[0]} - {tmp_operation[1]} = {tmp_operation[0] - tmp_operation[1]}'] = f'You answer correct! {user_variant}'
+            else:
+                res[f'{tmp_operation[0]} - {tmp_operation[1]} = {tmp_operation[0] - tmp_operation[1]}'] = f'You answer wrong {user_variant} :('
+
+        elif choose_operation(tmp_operation[0], tmp_operation[1]) == '*':
+            user_variant = input(f'Enter {tmp_operation[0]} * {tmp_operation[1]} = : ')
+            if helper_try(user_variant) == tmp_operation[0] * tmp_operation[1]:
+                res[f'{tmp_operation[0]} * {tmp_operation[1]} = {tmp_operation[0] * tmp_operation[1]}'] = f'You answer correct! {user_variant}'
+            else:
+                res[f'{tmp_operation[0]} * {tmp_operation[1]} = {tmp_operation[0] * tmp_operation[1]}'] = f'You answer wrong {user_variant} :('
+
+        elif choose_operation(tmp_operation[0], tmp_operation[1]) == '/':
+            user_variant = input(f'Enter {tmp_operation[0]} / {tmp_operation[1]} = : ')
+            if helper_try(user_variant) == tmp_operation[0] / tmp_operation[1]:
+                res[f'{tmp_operation[0]} / {tmp_operation[1]} = {tmp_operation[0] / tmp_operation[1]}'] = f'You answer correct! {user_variant}'
+            else:
+                res[f'{tmp_operation[0]} / {tmp_operation[1]} = {tmp_operation[0] / tmp_operation[1]}'] = f'You answer wrong {user_variant} :('
+
+        input_des = input('Enter anything to start or stop to stop: ')
+
+    return res
+
+
+# Slide 20
+# Task 1
+def std(arr: list) -> float:
+    med = sum(arr) / len(arr)
+    help_arr = sum([(i - med) ** 2 for i in arr]) // len(arr)
+    return f'Numpy return {np.std(arr)}\nOur function return {help_arr ** 0.5}'
