@@ -24,6 +24,23 @@ def factor_of_number(number: int) -> list:
 
 # Slide 7
 # Task 1
+def tennis_tournament() -> None:
+    counter = 1
+    first_name = input('Enter name of first player: ').capitalize()
+    second_name = input('Enter name of second player: ').capitalize()
+    result = {first_name: 0, second_name: 0}
+    while counter != 11:
+        res_of_round = input(f'Round: {counter}, this round win: {first_name} or {second_name}: ').capitalize()
+
+        if res_of_round in [first_name, second_name]:
+            if res_of_round == first_name:
+                result[first_name] += 1
+            else:
+                result[second_name] += 1
+            counter += 1
+        else:
+            print('You write wrong name. Try again!')
+    return f'{first_name} win {second_name} with score: {result[first_name]}' if result[first_name] > result[second_name] else f'{second_name} win {first_name} with score: {result[second_name]}'
 
 
 # Task 2
@@ -45,7 +62,50 @@ def mark_student() -> None:
 # Slide 19
 # Task 1
 def chess_tournament() -> dict:
-    pass
+    name_with_win = []
+    win_dict = dict()
+
+    def helper_check_user_enter(value):
+        try:
+            return int(value)
+        except TypeError:
+            return 'Sorry, try again!'
+
+    start_value = input('Enter how many members in tournament: ')
+
+    if helper_check_user_enter(start_value):
+        start_value = helper_check_user_enter(start_value)
+        for i in range(start_value):
+            enter_name = input('Enter name of user: ').capitalize()
+            if enter_name in name_with_win:
+                name_with_win.append(enter_name + str(randint(0, 100)))
+            else:
+                name_with_win.append(enter_name)
+    win_dict = {i: 0 for i in name_with_win}
+    counter = 10
+    help_to_iterate = 1
+    start_tournament = name_with_win[0]
+
+    while counter != 0:
+        for i in range(0, len(name_with_win)):
+            if name_with_win[i] != start_tournament:
+                result = input(f'{start_tournament} vs {name_with_win[i]} who win: ').capitalize()
+                if result in win_dict.keys():
+                    if result == start_tournament:
+                        win_dict[start_tournament] += 1
+                    elif result == name_with_win[i]:
+                        win_dict[name_with_win[i]] += 1
+            else:
+                continue
+        try:
+            start_tournament = name_with_win[help_to_iterate]
+            help_to_iterate += 1
+        except IndexError:
+            break
+
+    for key, value in sorted(win_dict.items()):
+        if value > 0:
+            print(f'Player {key} win {value} game')
 
 
 # Task 2
