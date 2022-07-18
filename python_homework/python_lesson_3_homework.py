@@ -6,14 +6,15 @@ from math import sqrt
 
 
 # Task 2
-# Professor Exam
+# Professor Exam - лучше решать через класс
 def professor_exam() -> None:
     # Create helper func to take input from user
     # Хочу что б код можно было использовать три раза, поэтому мы сами будем
     # Передавать параметр для ввода, y нас будет student, mark, result_of_exam
     result_dict = dict()
     pattern_of_input = ['student', 'mark', 'result_of_exam']
-    def helper_func_input(parameter_to_input='student'):
+    result = []
+    def helper_func_input(parameter_to_input='student') -> list:
         res = []
         input_desc = input('If you want to start enter yes/no: ')
         while input_desc != 'no':
@@ -21,6 +22,11 @@ def professor_exam() -> None:
             res.append(text_input)
             input_desc = input('If you want to stop enter no: ')
         return res
+
+    for i in pattern_of_input:
+        for k in helper_func_input(i):
+            result.append(k)
+    print(result)
 
     
 print(professor_exam())
