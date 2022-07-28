@@ -9,7 +9,23 @@ from math import sqrt
 # Task 2
 # Professor Exam - лучше решать через класс
 def professor_exam() -> None:
+    # One more variant
+    '''
+    help_dict = {}
+    stop = input('Введите stop to stop: ')
+    while stop != 'stop':
+        input_name = input('Введите имя: ')
+        if input_name not in help_dict:
+            input_mark = input(f'Введите оценку {input_name}: ')
+            input_pass = input(f'Введите прошел или не прошел студент {input_name}: ')
+            help_dict[input_name] = [input_mark, input_pass]
+        elif input_name in help_dict:
+            input_mark = input(f'Введите оценку {input_name}: ')
+            input_pass = input(f'Введите прошел или не прошел студент {input_name}: ')
+            help_dict[input_name + str(randint(0, 1000))] = [input_mark, input_pass]
 
+        stop = input('Введите stop to stop: ')
+    '''
     # Функция помощник для очистки данных
     def helper_to_clean(items: str) -> str:
         return ''.join(i for i in items if i.isalpha()).capitalize() if items.isdigit() == False else ''.join(i for i in items if i.isdigit() == True)
