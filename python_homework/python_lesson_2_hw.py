@@ -148,9 +148,6 @@ def sequence():
     print('Smallest value is, ', smallest_number)
 
 
-# Task 8
-
-
 # Task 10
 # fizz-buzz game
 def sipmle_game():
