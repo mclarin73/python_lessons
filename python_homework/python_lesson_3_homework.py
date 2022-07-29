@@ -2,6 +2,7 @@
 # import all module that we need
 from math import sqrt
 
+print('Change')
 
 # Task 1
 
